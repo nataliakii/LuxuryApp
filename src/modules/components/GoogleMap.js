@@ -12,7 +12,7 @@ const GoogleMapComponent = ({location}) => {
   const [map, setMap] = useState(null);
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyB0xtT-PgDUe0Q3-PFFMnBxCLjXoTWUY5Q",
+    googleMapsApiKey: process.env.GOOGLE_KEY,
   });
 
   const onLoad = (map) => {

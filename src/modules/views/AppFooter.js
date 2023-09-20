@@ -17,18 +17,18 @@ function Copyright() {
   );
 }
 
-const iconStyle = {
-  width: 48,
-  height: 48,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: 'warning.main',
-  mr: 1,
-  '&:hover': {
-    bgcolor: 'warning.dark',
-  },
-};
+//const iconStyle = {
+//  width: 48,
+//  height: 48,
+//  display: 'flex',
+//  justifyContent: 'center',
+//  alignItems: 'center',
+//  backgroundColor: 'warning.main',
+//  mr: 1,
+//  '&:hover': {
+//    bgcolor: 'warning.dark',
+//  },
+//};
 
 
 function AppFooter() {
