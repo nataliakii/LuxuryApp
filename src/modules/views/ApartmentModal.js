@@ -175,12 +175,6 @@ const ApartmentCard = ({ apartment }) => {
                 City view
               </FacilityIcon>
             )}
-            {apartment.cityview && (
-              <FacilityIcon>
-                <IconImage src="/facility-icons/cityview.png" alt="cityview" />
-                City view
-              </FacilityIcon>
-            )}
             {apartment.flat_screen_tv && (
               <FacilityIcon>
                 <IconImage src="/facility-icons/tv.png" alt="tv" />

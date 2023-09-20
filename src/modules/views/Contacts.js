@@ -18,7 +18,7 @@ const ContactsContainer = styled(Container)(({ theme }) => ({
 const ContactsBox = styled(Box)(({ theme }) => ({
   flex: 1,
   padding: theme.spacing(4),
-  backgroundColor: theme.palette.primary.light,
+  backgroundColor: theme.palette.primary.dark,
   width: '100%',
   height: '100%',
   overflowY: 'auto',

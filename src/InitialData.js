@@ -20,7 +20,7 @@ module.exports = [
 
     name: "Apollonas",
 
-    longName: "Superlux Apollonas",
+    longName: "Deluxe Suite Apollonas",
 
     desc: {
       en: "Description in English",
@@ -33,7 +33,7 @@ module.exports = [
       "/images/1/Apollonas_02.jpg",
       "/images/1/Apollonas_03.jpg",
       "/images/1/Apollonas_04.jpg",
-      "/images/1/Apollonas_05.jpg",
+      //"/images/1/Apollonas_05.jpg",
       "/images/1/Apollonas_06.jpg",
       "/images/1/Apollonas_07.jpg",
       "/images/1/Apollonas_08.jpg",
@@ -50,7 +50,7 @@ module.exports = [
   },
 
   {
-    size: "22 sqft",
+    size: "35 sqft",
     kitchen: true,
     private_bathroom: true,
     seaview: true,
@@ -59,49 +59,48 @@ module.exports = [
     air_conditioning: true,
     flat_screen_tv: true,
     free_wifi: true,
-    extra_large_double_beds: 2,
-    double_beds: 1,
+    extra_large_double_beds: 1,
+    double_beds: 2,
     single_sofas: 1,
     double_sofas: 0,
-    single_beds: 2,
+    single_beds: 0,
     terrace: false,
     balcony: true,
     id: 2,
     name: "Salomi",
-    longName: "Суперлюкс Salomi с видом на море",
+    longName: "Deluxe Suite with Sea View Salomi",
 
     desc: {
-      en: "Description in English",
-
+      en: "Boasting a private entrance, this air-conditioned suite comes with a kitchen, 1 bedroom and 1 bathroom with a walk-in shower and a hairdryer. Guests can make meals in the kitchen that features a stovetop, a refrigerator, kitchenware and a microwave. Featuring a terrace with sea views, this suite also features soundproof walls and a flat-screen TV with satellite channels. The unit has 2 beds.",
       sr: "Опис на српском",
     },
 
     photos: [
       "/images/2/Salome_01.jpg",
-      "/images/2/Salome_02.jpg",
-      "/images/2/Salome_03.jpg",
-      "/images/2/Salome_04.jpg",
+      //"/images/2/Salome_02.jpg",
+      //"/images/2/Salome_03.jpg",
+      //"/images/2/Salome_04.jpg",
       "/images/2/Salome_05.jpg",
       "/images/2/Salome_06.jpg",
-      "/images/2/Salome_07.jpg",
-      "/images/2/Salome_08.jpg",
+      //"/images/2/Salome_07.jpg",
+      //"/images/2/Salome_08.jpg",
       "/images/2/Salome_09.jpg",
       "/images/2/Salome_10.jpg",
       "/images/2/Salome_11.jpg",
       "/images/2/Salome_12.jpg",
-      "/images/2/Salome_13.jpg",
+      //"/images/2/Salome_13.jpg",
       "/images/2/Salome_14.jpg",
       "/images/2/Salome_15.jpg",
-      "/images/2/Salome_16.jpg",
-      "/images/2/Salome_17.jpg",
+      //"/images/2/Salome_16.jpg",
+      //"/images/2/Salome_17.jpg",
       "/images/2/Salome_18.jpg",
       "/images/2/Salome_19.jpg",
       "/images/2/Salome_20.jpg",
-      "/images/2/Salome_21.jpg",
+      //"/images/2/Salome_21.jpg",
       "/images/2/Salome_22.jpg",
       "/images/2/Salome_23.jpg",
       "/images/2/Salome_24.jpg",
-      "/images/2/Salome_25.jpg",
+      //"/images/2/Salome_25.jpg",
       "/images/2/Salome_26.jpg",
       "/images/2/Salome_27.jpg",
       "/images/2/Salome_28.jpg",
@@ -115,7 +114,7 @@ module.exports = [
   },
 
   {
-    size: "25 sqft",
+    size: "28 sqft",
     kitchen: false,
     private_bathroom: false,
     seaview: true,
@@ -127,13 +126,13 @@ module.exports = [
     extra_large_double_beds: 1,
     double_beds: 0,
     single_sofas: 1,
-    double_sofas: 1,
-    single_beds: 1,
+    double_sofas: 0,
+    single_beds: 0,
     terrace: false,
     balcony: false,
     id: 3,
     name: "Victoria",
-    longName: "Суперлюкс Victoria с кроватью размера «queen-size»",
+    longName: "Deluxe Queen Suite Victoria",
     desc: {
       en: "Description in English",
 
@@ -169,7 +168,7 @@ module.exports = [
   },
 
   {
-    size: "12 sqft",
+    size: "25 sqft",
 
     kitchen: true,
 
@@ -187,11 +186,11 @@ module.exports = [
 
     free_wifi: true,
 
-    extra_large_double_beds: 2,
+    extra_large_double_beds: 1,
 
-    double_beds: 1,
+    double_beds: 0,
 
-    single_sofas: 0,
+    single_sofas: 1,
 
     double_sofas: 0,
 
@@ -203,9 +202,9 @@ module.exports = [
 
     id: 4,
 
-    name: " Alexander",
+    name: "Alexander",
 
-    longName: "Полулюкс Alexander с балконом",
+    longName: "Junior Suite with Balcony Alexander",
 
     desc: {
       en: "Boasting a private entrance, this air-conditioned suite features a kitchen, 1 bedroom and 1 bathroom with a walk-in shower and a hairdryer. Guests can make meals in the kitchen that has a stovetop, a refrigerator, kitchenware and a microwave. Featuring an outdoor dining area, this suite also features soundproof walls, a tea and coffee maker and a flat-screen TV with satellite channels. The unit has 1 bed.",
@@ -214,23 +213,23 @@ module.exports = [
     },
 
     photos: [
-      "/images/4/Alexander_01.jpg",
-      "/images/4/Alexander_02.jpg",
+      //"/images/4/Alexander_01.jpg",
+      //"/images/4/Alexander_02.jpg",
       "/images/4/Alexander_03.jpg",
       "/images/4/Alexander_04.jpg",
-      "/images/4/Alexander_05.jpg",
-      "/images/4/Alexander_06.jpg",
+      //"/images/4/Alexander_05.jpg",
+      //"/images/4/Alexander_06.jpg",
       "/images/4/Alexander_07.jpg",
       "/images/4/Alexander_08.jpg",
-      "/images/4/Alexander_09.jpg",
+      //"/images/4/Alexander_09.jpg",
       "/images/4/Alexander_10.jpg",
-      "/images/4/Alexander_11.jpg",
+      //"/images/4/Alexander_11.jpg",
       "/images/4/Alexander_12.jpg",
       "/images/4/Alexander_13.jpg",
       "/images/4/Alexander_14.jpg",
-      "/images/4/Alexander_15.jpg",
+      //"/images/4/Alexander_15.jpg",
       "/images/4/Alexander_16.jpg",
-      "/images/4/Alexander_17.jpg",
+      //"/images/4/Alexander_17.jpg",
     ],
 
     price: [
@@ -241,7 +240,7 @@ module.exports = [
   },
 
   {
-    size: "25 sqft",
+    size: "30 sqft",
 
     kitchen: true,
 
@@ -271,13 +270,13 @@ module.exports = [
 
     terrace: true,
 
-    balcony: true,
+    balcony: false,
 
     id: 5,
 
     name: "Nefeli ",
 
-    longName: "Полулюкс Nefeli с террасой",
+    longName: "Junior Suite with Terrace Nefeli",
 
     desc: {
       en: "Description in English",
@@ -286,7 +285,7 @@ module.exports = [
     },
 
     photos: [
-      "images/5/Nefeli_01.jpg",
+      //"images/5/Nefeli_01.jpg",
       "images/5/Nefeli_02.jpg",
       "images/5/Nefeli_03.jpg",
       "images/5/Nefeli_04.jpg",
@@ -416,9 +415,9 @@ module.exports = [
 
     id: 7,
 
-    name: "Delux 20",
+    name: "Deluxe 20",
 
-    longName: "Двухместный Делюкс с 1 кроватью 20м",
+    longName: "Deluxe Double Room 20",
 
     desc: {
       en: "Description in English",
@@ -490,7 +489,7 @@ module.exports = [
 
     name: "Deluxe Red",
 
-    longName: "Двухместный Делюкс с 1 кроватью 12м red",
+    longName: "Deluxe Double Room Red",
 
     desc: {
       en: "Description in English",
@@ -556,7 +555,7 @@ module.exports = [
 
     name: "Deluxe 12",
 
-    longName: "Двухместный Делюкс с 1 кроватью 12м",
+    longName: "Deluxe Double Room 12",
 
     desc: {
       en: "Description in English",
