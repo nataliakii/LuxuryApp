@@ -33,7 +33,7 @@ module.exports = [
       "/images/1/Apollonas_02.jpg",
       "/images/1/Apollonas_03.jpg",
       "/images/1/Apollonas_04.jpg",
-      //"/images/1/Apollonas_05.jpg",
+      "/images/1/Apollonas_05.jpg",
       "/images/1/Apollonas_06.jpg",
       "/images/1/Apollonas_07.jpg",
       "/images/1/Apollonas_08.jpg",
@@ -77,30 +77,30 @@ module.exports = [
 
     photos: [
       "/images/2/Salome_01.jpg",
-      //"/images/2/Salome_02.jpg",
-      //"/images/2/Salome_03.jpg",
-      //"/images/2/Salome_04.jpg",
+      "/images/2/Salome_02.jpg",
+      "/images/2/Salome_03.jpg",
+      "/images/2/Salome_04.jpg",
       "/images/2/Salome_05.jpg",
       "/images/2/Salome_06.jpg",
-      //"/images/2/Salome_07.jpg",
-      //"/images/2/Salome_08.jpg",
+      "/images/2/Salome_07.jpg",
+      "/images/2/Salome_08.jpg",
       "/images/2/Salome_09.jpg",
       "/images/2/Salome_10.jpg",
       "/images/2/Salome_11.jpg",
       "/images/2/Salome_12.jpg",
-      //"/images/2/Salome_13.jpg",
+      "/images/2/Salome_13.jpg",
       "/images/2/Salome_14.jpg",
       "/images/2/Salome_15.jpg",
-      //"/images/2/Salome_16.jpg",
-      //"/images/2/Salome_17.jpg",
+      "/images/2/Salome_16.jpg",
+      "/images/2/Salome_17.jpg",
       "/images/2/Salome_18.jpg",
       "/images/2/Salome_19.jpg",
       "/images/2/Salome_20.jpg",
-      //"/images/2/Salome_21.jpg",
+      "/images/2/Salome_21.jpg",
       "/images/2/Salome_22.jpg",
       "/images/2/Salome_23.jpg",
       "/images/2/Salome_24.jpg",
-      //"/images/2/Salome_25.jpg",
+      "/images/2/Salome_25.jpg",
       "/images/2/Salome_26.jpg",
       "/images/2/Salome_27.jpg",
       "/images/2/Salome_28.jpg",
@@ -213,23 +213,23 @@ module.exports = [
     },
 
     photos: [
-      //"/images/4/Alexander_01.jpg",
-      //"/images/4/Alexander_02.jpg",
+      "/images/4/Alexander_01.jpg",
+      "/images/4/Alexander_02.jpg",
       "/images/4/Alexander_03.jpg",
       "/images/4/Alexander_04.jpg",
-      //"/images/4/Alexander_05.jpg",
-      //"/images/4/Alexander_06.jpg",
+      "/images/4/Alexander_05.jpg",
+      "/images/4/Alexander_06.jpg",
       "/images/4/Alexander_07.jpg",
       "/images/4/Alexander_08.jpg",
-      //"/images/4/Alexander_09.jpg",
+      "/images/4/Alexander_09.jpg",
       "/images/4/Alexander_10.jpg",
-      //"/images/4/Alexander_11.jpg",
+      "/images/4/Alexander_11.jpg",
       "/images/4/Alexander_12.jpg",
       "/images/4/Alexander_13.jpg",
       "/images/4/Alexander_14.jpg",
-      //"/images/4/Alexander_15.jpg",
+      "/images/4/Alexander_15.jpg",
       "/images/4/Alexander_16.jpg",
-      //"/images/4/Alexander_17.jpg",
+      "/images/4/Alexander_17.jpg",
     ],
 
     price: [
@@ -241,46 +241,26 @@ module.exports = [
 
   {
     size: "30 sqft",
-
     kitchen: true,
-
     private_bathroom: false,
-
     seaview: false,
-
     cityview: true,
-
     gardenview: true,
-
     air_conditioning: true,
-
     flat_screen_tv: true,
-
     free_wifi: true,
-
     extra_large_double_beds: 1,
-
     double_beds: 1,
-
     single_sofas: 0,
-
     double_sofas: 1,
-
     single_beds: 1,
-
     terrace: true,
-
     balcony: false,
-
     id: 5,
-
     name: "Nefeli ",
-
     longName: "Junior Suite with Terrace Nefeli",
-
     desc: {
       en: "Description in English",
-
       sr: "Опис на српском",
     },
 
@@ -343,15 +323,10 @@ module.exports = [
     double_sofas: 0,
 
     single_beds: 2,
-
     terrace: false,
-
     balcony: false,
-
     id: 6,
-
     name: "Areti",
-
     longName: "Трехместный Делюкс Areti",
 
     desc: {
@@ -571,7 +546,6 @@ module.exports = [
       "/images/9/delux12m_05.jpg",
       "/images/9/delux12m_06.jpg",
       "/images/9/delux12m_07.jpg",
-      "/images/9/delux12m_08.jpg",
       "/images/9/delux12m_09.jpg",
       "/images/9/delux12m_10.jpg",
       "/images/9/delux12m_11.jpg",

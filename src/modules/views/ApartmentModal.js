@@ -95,22 +95,17 @@ const IconImage = styled("img")({
 });
 
 const ApartmentCard = ({ apartment }) => {
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    margin: 0,
-  };
 
   return (
     <Root>
       <Paper elevation={3} component={CarouselContainer}>
-        <Carousel>
+        <Carousel showThumbs={false} dynamicHeight>
           {apartment.photos.map((photo, index) => (
             <div key={index}>
               <img
                 src={photo}
                 alt={`Apartment ${apartment.name}`}
-                style={imageStyle}
+                style={{ width: "auto", maxHeight: "500px" }}
               />
             </div>
           ))}

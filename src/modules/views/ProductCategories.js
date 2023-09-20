@@ -73,7 +73,6 @@ const mapApartmentsToImages = (apartments) => {
 export default function ProductCategories ()
 {
     const [ selectedApartmentId, setSelectedApartmentId ] = useState( null );
-    console.log(InitialData)
     const images = mapApartmentsToImages(InitialData);
 
     const openApartmentModal = (apartmentId) => {

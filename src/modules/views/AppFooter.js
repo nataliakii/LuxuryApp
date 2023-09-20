@@ -9,7 +9,7 @@ function Copyright() {
   return (
     <React.Fragment>
       {'© NataliaKi '} 
-      <Link color="secondary.dark" href="https://mui.com/">
+      <Link color="secondary.dark" href="https://lambent-bubblegum-7bc6b5.netlify.app">
         S.Luxury Princess Suite 
       </Link>{' '}
       {new Date().getFullYear()}
