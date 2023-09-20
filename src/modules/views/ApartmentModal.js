@@ -65,7 +65,8 @@ const Root = styled("div")(({ theme }) => ({
 const CarouselContainer = styled("div")(({ theme }) => ({
   maxWidth: "100%",
   overflow: "hidden",
-  maxHeight: "700px",
+    maxHeight: "700px",
+    width: "100%", // Add this line for responsiveness
 }));
 
 const ContentContainer = styled("div")(({ theme }) => ({
@@ -100,19 +101,33 @@ const ApartmentCard = ({ apartment }) => {
     <Root>
       <Paper elevation={3} component={CarouselContainer}>
         <Carousel showThumbs={false} dynamicHeight>
-          {apartment.photos.map((photo, index) => (
-            <div key={index}>
-              <img
-                src={photo}
-                alt={`Apartment ${apartment.name}`}
-                style={{ width: "auto", maxHeight: "500px" }}
-              />
-            </div>
-          ))}
+          {apartment.photos.map((photo, index) => {
+            // Create a new Image object to get the image's dimensions
+            const img = new Image();
+            img.src = photo;
+
+            // Define the maxWidth based on image dimensions
+            let maxWidth = "400px"; // Default maxWidth for larger images
+            if (img.width && img.height) {
+              if (img.width <= 300 || img.height <= 300) {
+                maxWidth = "200px"; // If dimensions are smaller
+              }
+            }
+
+            return (
+              <div key={index}>
+                <img
+                  src={photo}
+                  alt={`Apartment ${apartment.name}`}
+                  style={{ width: "100%", maxWidth, height: "auto" }}
+                />
+              </div>
+            );
+          })}
         </Carousel>
       </Paper>
       <Grid container component={ContentContainer}>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="body1" sx={{ fontSize: 15 }}>
             {apartment.desc.en}
                   </Typography>

@@ -551,8 +551,6 @@ module.exports = [
       "/images/9/delux12m_11.jpg",
       "/images/9/delux12m_12.jpg",
       "/images/9/delux12m_13.jpg",
-      "/images/9/delux12m_14.jpg",
-      "/images/9/delux12m_15.jpg",
     ],
 
     price: [
