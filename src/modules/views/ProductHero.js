@@ -20,11 +20,11 @@ export default function ProductHero() {
         src={backgroundImage}
         alt="s luxury princess suite"
       />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
+      <Typography color="primary.dark" align="center" variant="h4" marked="center">
         Unleash Your Inner Royalty
       </Typography>
       <Typography
-        color="inherit"
+        color="secondary.dark"
         align="center"
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}

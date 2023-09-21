@@ -17,14 +17,10 @@ module.exports = [
     terrace: true,
     balcony: false,
     id: 1,
-
     name: "Apollonas",
-
     longName: "Deluxe Suite Apollonas",
-
     desc: {
       en: "Description in English",
-
       sr: "Опис на српском",
     },
 
