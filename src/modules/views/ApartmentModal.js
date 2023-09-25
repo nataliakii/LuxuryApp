@@ -133,7 +133,7 @@ const ApartmentCard = ({ apartment }) => {
                   </Typography>
                   <FacilityIcon sx={{ mt:3, }}>
             <IconImage src="/facility-icons/size.png" alt="size" />
-            Size - {apartment.size}
+            Size - {apartment.size} m2
           </FacilityIcon>
         </Grid>
         <Grid item xs={12}>

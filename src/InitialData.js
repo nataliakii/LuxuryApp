@@ -1,6 +1,6 @@
 module.exports = [
   {
-    size: "12 sqft",
+    size: 12,
     kitchen: true,
     private_bathroom: true,
     seaview: true,
@@ -46,7 +46,7 @@ module.exports = [
   },
 
   {
-    size: "35 sqft",
+    size: 35,
     kitchen: true,
     private_bathroom: true,
     seaview: true,
@@ -110,7 +110,7 @@ module.exports = [
   },
 
   {
-    size: "28 sqft",
+    size: 28,
     kitchen: false,
     private_bathroom: false,
     seaview: true,
@@ -164,7 +164,7 @@ module.exports = [
   },
 
   {
-    size: "25 sqft",
+    size: 25,
 
     kitchen: true,
 
@@ -236,7 +236,7 @@ module.exports = [
   },
 
   {
-    size: "30 sqft",
+    size: 30,
     kitchen: true,
     private_bathroom: false,
     seaview: false,
@@ -292,7 +292,7 @@ module.exports = [
   },
 
   {
-    size: "13 sqft",
+    size: 13,
 
     kitchen: true,
 
@@ -352,7 +352,7 @@ module.exports = [
   },
 
   {
-    size: "20 sqft",
+    size: 20,
 
     kitchen: true,
 
@@ -424,7 +424,7 @@ module.exports = [
   },
 
   {
-    size: "12 sqft",
+    size: 12,
 
     kitchen: false,
 
@@ -490,7 +490,7 @@ module.exports = [
   },
 
   {
-    size: "12 sqft",
+    size: 12,
 
     kitchen: true,
 
