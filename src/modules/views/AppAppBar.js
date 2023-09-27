@@ -7,26 +7,25 @@ import Toolbar from '../components/Toolbar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
-import LanguageIcon from '@mui/icons-material/Language'; // Import an icon for the language menu
+import LanguageIcon from '@mui/icons-material/Language';
+import { useTranslation } from "react-i18next";
 
-const rightLink = {
-  fontSize: {
-    xs: 13,
-    sm: 19,
-  },
-  color: 'common.white',
-  ml: 3,
-};
 
-function AppAppBar() {
+function AppAppBar({setLanguage, language}) {
   const [anchorEl, setAnchorEl] = React.useState(null); // State for the anchor element of the menu
-
+  const { i18n } = useTranslation();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleLanguageChange = (event) => {
+    setLanguage( event );
+    i18n.changeLanguage(event);
+    handleClose();
   };
 
   return (
@@ -49,21 +48,19 @@ function AppAppBar() {
             S. LUXURY PRINCESS SUITE
           </Link>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
-            {/* Add a language dropdown */}
             <IconButton
               color="inherit"
               onClick={handleClick}
             >
               <LanguageIcon />
             </IconButton>
-            {/* Language menu */}
             <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>English</MenuItem>
-              <MenuItem onClick={handleClose}>Serbian</MenuItem>
+              <MenuItem onClick={() => handleLanguageChange("en")}>English</MenuItem>
+              <MenuItem onClick={() => handleLanguageChange("el")}>Ελληνικά</MenuItem>
             </Menu>
           </Box>
         </Toolbar>

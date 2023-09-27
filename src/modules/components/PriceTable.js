@@ -8,15 +8,15 @@ import {
   TableRow,
 } from '@mui/material';
 
-const PriceTable = ({ prices}) => {
+const PriceTable = ({ prices, t}) => {
   return (
     <TableContainer>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Dates</TableCell>
-            <TableCell>Min Stay (nights)</TableCell>
-            <TableCell>Rate (€ per day)</TableCell>
+            <TableCell>{ t( "apModal.dates" ) }</TableCell>
+            <TableCell>{ t( "apModal.ms" ) } (nights)</TableCell>
+            <TableCell>{ t( "apModal.rate" ) }(€ per day)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -15,17 +15,21 @@ import { styled } from "@mui/material/styles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import PriceTable from "../components/PriceTable";
+import { useTranslation } from "react-i18next";
 
 const fetchApartmentDataById = (apartmentId) => {
   const apartment = InitialData.find((apt) => apt.id === apartmentId);
   return apartment || null;
 };
 
+
+
 const ApartmentModal = ({ apartmentId, onClose }) => {
-  const [apartment, setApartment] = useState(null);
+  const [ apartment, setApartment ] = useState( null );
+  const { t, i18n } = useTranslation();
+
 
   useEffect(() => {
-    // Fetch apartment data when apartmentId changes
     const fetchedApartment = fetchApartmentDataById(apartmentId);
     setApartment(fetchedApartment);
   }, [apartmentId]);
@@ -35,11 +39,11 @@ const ApartmentModal = ({ apartmentId, onClose }) => {
       <Dialog open={!!apartment} onClose={onClose} maxWidth="md" fullWidth>
         <DialogTitle>{apartment ? apartment.longName : ""}</DialogTitle>
         <DialogContent>
-          <ApartmentCard apartment={apartment} />
+          <ApartmentCard apartment={ apartment } t={ t } i18n={ i18n} />
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose} color="primary">
-            Close
+          {t("apModal.close")}
           </Button>
         </DialogActions>
       </Dialog>
@@ -95,7 +99,7 @@ const IconImage = styled("img")({
   marginRight: "8px",
 });
 
-const ApartmentCard = ({ apartment }) => {
+const ApartmentCard = ({ apartment,t,i18n }) => {
 
   return (
     <Root>
@@ -129,16 +133,16 @@ const ApartmentCard = ({ apartment }) => {
       <Grid container component={ContentContainer}>
         <Grid item xs={12} sm={6}>
           <Typography variant="body1" sx={{ fontSize: 15 }}>
-            {apartment.desc.en}
+            {apartment.desc[i18n.language]}
                   </Typography>
                   <FacilityIcon sx={{ mt:3, }}>
             <IconImage src="/facility-icons/size.png" alt="size" />
-            Size - {apartment.size} m2
+            {t("apModal.size")} - {apartment.size} m2
           </FacilityIcon>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="subtitle1" sx={sectionHeadingStyle}>
-            Room Facilities:
+          {t("apModal.rf")}
                   </Typography>{ " " }
                   
                   <FacilityIconsContainer>
@@ -146,13 +150,13 @@ const ApartmentCard = ({ apartment }) => {
             {apartment.kitchen && (
               <FacilityIcon>
                 <IconImage src="/facility-icons/kitchen.png" alt="Kitchen" />
-                Kitchen
+                {t("apModal.k")}
               </FacilityIcon>
             )}
             {apartment.private_bathroom && (
               <FacilityIcon>
                 <IconImage src="/facility-icons/bath.png" alt="Bathroom" />
-                Private Bathroom
+                {t("apModal.pb")}
               </FacilityIcon>
             )}
             {apartment.air_conditioning && (
@@ -161,13 +165,13 @@ const ApartmentCard = ({ apartment }) => {
                   src="/facility-icons/air-conditioning.png"
                   alt="air_conditionin"
                 />
-                Air-condition
+                          {t("apModal.ac")}
               </FacilityIcon>
             )}
             {apartment.seaview && (
               <FacilityIcon>
                 <IconImage src="/facility-icons/seaview.png" alt="Seaview" />
-                Seaview
+                {t("apModal.sv")}
               </FacilityIcon>
             )}
             {apartment.gardenview && (
@@ -176,19 +180,19 @@ const ApartmentCard = ({ apartment }) => {
                   src="/facility-icons/gardenview.png"
                   alt="gardenview"
                 />
-                Garden view
+          {t("apModal.gv")}
               </FacilityIcon>
             )}
             {apartment.cityview && (
               <FacilityIcon>
                 <IconImage src="/facility-icons/cityview.png" alt="cityview" />
-                City view
+                {t("apModal.cv")}
               </FacilityIcon>
             )}
             {apartment.flat_screen_tv && (
               <FacilityIcon>
                 <IconImage src="/facility-icons/tv.png" alt="tv" />
-                Flat-screen TV
+                {t("apModal.tv")}
               </FacilityIcon>
             )}
             {apartment.extra_large_double_beds && (
@@ -197,7 +201,7 @@ const ApartmentCard = ({ apartment }) => {
                   src="/facility-icons/large_bed.png"
                   alt="large-bed"
                 />
-                {apartment.extra_large_double_beds} extra large double-bed
+                {apartment.extra_large_double_beds} {t("apModal.elb")}
               </FacilityIcon>
             )}
             {apartment.double_beds && (
@@ -206,7 +210,7 @@ const ApartmentCard = ({ apartment }) => {
                   src="/facility-icons/double_bed.png"
                   alt="double-bed"
                 />
-                {apartment.double_beds} double-bed
+                {apartment.double_beds}          {t("apModal.db")}
               </FacilityIcon>
             )}
             {apartment.single_bed && (
@@ -215,33 +219,33 @@ const ApartmentCard = ({ apartment }) => {
                   src="/facility-icons/single_bed.png"
                   alt="single-bed"
                 />
-                {apartment.single_beds} single bed
+                {apartment.single_beds}          {t("apModal.sb")}
               </FacilityIcon>
             )}
           </FacilityIconsContainer>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="subtitle1" sx={sectionHeadingStyle}>
-            Outdoor Facilities:
+          {t("apModal.of")}
           </Typography>
 
           {apartment.balcony && (
             <FacilityIcon>
               <IconImage src="/facility-icons/balcony.png" alt="balcony" />
-              Balcony
+              {t("apModal.b")}
             </FacilityIcon>
           )}
           {apartment.terrace && (
             <FacilityIcon>
               <IconImage src="/facility-icons/terrace.png" alt="terrace" />
-              Terrace
+              {t("apModal.t")}
             </FacilityIcon>
           )}
         </Grid>
         <Typography variant="subtitle1" sx={sectionHeadingStyle}>
-          Price:
+         {t("apModal.p")}
         </Typography>
-        <PriceTable prices={apartment.price} />
+        <PriceTable prices={ apartment.price } t={t} />
       </Grid>
     </Root>
   );

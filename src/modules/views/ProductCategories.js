@@ -8,6 +8,7 @@ import {
     Container
 } from '@mui/material';
 import InitialData from "../../InitialData";
+import { useTranslation } from "react-i18next";
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -73,7 +74,8 @@ const mapApartmentsToImages = (apartments) => {
 export default function ProductCategories ()
 {
     const [ selectedApartmentId, setSelectedApartmentId ] = useState( null );
-    const images = mapApartmentsToImages(InitialData);
+  const images = mapApartmentsToImages( InitialData );
+  const { t, i18n } = useTranslation();
 
     const openApartmentModal = (apartmentId) => {
       setSelectedApartmentId(apartmentId);
@@ -85,7 +87,7 @@ export default function ProductCategories ()
   return (
     <Container component="section" sx={{ mt: 8, mb: 4 }}>
       <Typography variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+      {t("productCategories.text")}
       </Typography>
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (

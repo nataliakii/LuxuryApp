@@ -21,7 +21,7 @@ module.exports = [
     longName: "Deluxe Suite Apollonas",
     desc: {
       en: "Description in English",
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -68,7 +68,7 @@ module.exports = [
 
     desc: {
       en: "Boasting a private entrance, this air-conditioned suite comes with a kitchen, 1 bedroom and 1 bathroom with a walk-in shower and a hairdryer. Guests can make meals in the kitchen that features a stovetop, a refrigerator, kitchenware and a microwave. Featuring a terrace with sea views, this suite also features soundproof walls and a flat-screen TV with satellite channels. The unit has 2 beds.",
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -132,7 +132,7 @@ module.exports = [
     desc: {
       en: "Description in English",
 
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -205,7 +205,7 @@ module.exports = [
     desc: {
       en: "Boasting a private entrance, this air-conditioned suite features a kitchen, 1 bedroom and 1 bathroom with a walk-in shower and a hairdryer. Guests can make meals in the kitchen that has a stovetop, a refrigerator, kitchenware and a microwave. Featuring an outdoor dining area, this suite also features soundproof walls, a tea and coffee maker and a flat-screen TV with satellite channels. The unit has 1 bed.",
 
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -257,7 +257,7 @@ module.exports = [
     longName: "Junior Suite with Terrace Nefeli",
     desc: {
       en: "Description in English",
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -328,7 +328,7 @@ module.exports = [
     desc: {
       en: "Description in English",
 
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -393,7 +393,7 @@ module.exports = [
     desc: {
       en: "Description in English",
 
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -465,7 +465,7 @@ module.exports = [
     desc: {
       en: "Description in English",
 
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [
@@ -530,8 +530,7 @@ module.exports = [
 
     desc: {
       en: "Description in English",
-
-      sr: "Опис на српском",
+      el: "Περιγραφή στα Αγγλικά",
     },
 
     photos: [

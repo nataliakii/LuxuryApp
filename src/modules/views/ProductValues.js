@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
+import { useTranslation } from "react-i18next";
 
 const item = {
   display: 'flex',
@@ -12,7 +13,27 @@ const item = {
   px: 5,
 };
 
-function ProductValues() {
+const values = {
+"en": {
+    1: "Exceptional Comfort",
+    2:"At S Princess Suite, we are dedicated to providing an exceptional level of comfort to our guests. We believe that a comfortable stay is the foundation of a memorable experience.",
+    3: "Personalized Service", 4: "Our commitment to personalized service sets us apart. We understand that each guest is unique, and we strive to cater to your individual needs and preferences. We are here to make your stay truly special.",
+    5:"PRIME LOCATION", 6:"S Princess Suite is ideally situated just 20 meters from the Aegean Sea in Nea Kallikratia, Chalkidiki. Our prime waterfront location offers direct access to pristine beaches, stunning sunsets, and various water activities, ensuring an unforgettable coastal getaway"
+  },
+  "el": {
+      1: "Εξαιρετική Άνεση",
+      2: "Στο S Princess Suite, αφιερώνουμε μερικά μόνο για να προσφέρουμε ένα εξαιρετικό επίπεδο άνεσης στους επισκέπτες μας. Πιστεύουμε ότι η άνετη διαμονή είναι η βάση μιας αξέχαστης εμπειρίας.",
+      3: "Εξατομικευμένη Εξυπηρέτηση",
+      4: "Η δέσμευσή μας στην εξατομικευμένη εξυπηρέτηση μας κάνει να ξεχωρίζουμε. Κατανοούμε ότι κάθε επισκέπτης είναι μοναδικός, και προσπαθούμε να ικανοποιήσουμε τις ατομικές σας ανάγκες και προτιμήσεις. Είμαστε εδώ για να κάνουμε τη διαμονή σας πραγματικά ξεχωριστή.",
+      5: "ΕΠΙΛΕΓΜΕΝΗ ΤΟΠΟΘΕΣΙΑ",
+      6: "Το S Princess Suite είναι ιδανικά τοποθετημένο μόλις 20 μέτρα από τον Αιγαίο Πέλαγος στη Νέα Καλλικράτεια, Χαλκιδική. Η προνομιακή τοποθεσία μας στην παραλία προσφέρει άμεση πρόσβαση σε παρθένες παραλίες, εκπληκτικά ηλιοβασιλέματα και διάφορες δραστηριότητες στο νερό, εξασφαλίζοντας μια αξέχαστη ακτογραμμή απόδραση."
+  }
+}
+
+function ProductValues ()
+{
+  const { i18n } = useTranslation();
+  const lang = i18n.language
   return (
     <Box
       component="section"
@@ -35,16 +56,10 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-              Exceptional Comfort
+              {values[lang]['1']}
               </Typography>
               <Typography variant="h5" fontSize={16}>
-                {
-                  'At S Princess Suite, we are dedicated to providing an exceptional level of comfort to our guests. '
-                }
-
-                {
-                  'We believe that a comfortable stay is the foundation of a memorable experience.'
-                }
+              {values[lang]['2']}
               </Typography>
             </Box>
           </Grid>
@@ -57,14 +72,10 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-              Personalized Service
+              {values[lang]['3']}
               </Typography>
               <Typography variant="h5" fontSize={16}>
-                {
-                  ' Our commitment to personalized service sets us apart. We understand that each guest is unique, and we strive to cater to your individual needs and preferences.  '
-                }
-
-                {'We are here to make your stay truly special.'}
+              {values[lang]['4']}
               </Typography>
             </Box>
           </Grid>
@@ -77,10 +88,10 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-              Prime Location
+              {values[lang]['5']}
               </Typography>
               <Typography variant="h5" fontSize={16} >
-                {'S Princess Suite is perfectly positioned just 20 meters from the sparkling Aegean Sea in the charming town of Nea Kallikratia, Chalkidiki. We understand that proximity to the sea is a top priority for many travelers. Enjoy direct and convenient access to pristine beaches, breathtaking sunsets, and water activities right at your doorstep. Our prime waterfront location sets the stage for an unforgettable coastal getaway. '}
+              {values[lang]['6']}
               </Typography>
             </Box>
           </Grid>

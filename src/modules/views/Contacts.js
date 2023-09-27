@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import GoogleMapComponent from "../components/GoogleMap";
+import { useTranslation } from "react-i18next";
 
 // Define a styled container for the Contacts section
 const ContactsContainer = styled(Container)(({ theme }) => ({
@@ -36,12 +37,12 @@ const Contacts = () => {
   const location = { lat: 40.310630, lng: 23.065669 };
   const phone = "+306998469136";
   const email = "sluxuryprincess@gmail.com";
-
+  const { t, i18n } = useTranslation();
   return (
     <ContactsContainer component="section">
       <ContactsBox>
         <Typography variant="h3" marked="center" align="center" component="h3" color='whitesmoke' mb={5}>
-          Contacts
+          {t("contacts.contacts")}
         </Typography>
         <ContactInfo>
           <Typography variant="h6" color='whitesmoke'>{phone}</Typography>

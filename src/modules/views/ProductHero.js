@@ -2,11 +2,13 @@ import * as React from 'react';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
-
+import { useTranslation } from "react-i18next";
 const backgroundImage =
   '/b2.jpg';
 
-export default function ProductHero() {
+export default function ProductHero ()
+{
+  const { t, i18n } = useTranslation();
   return (
     <ProductHeroLayout
       sxBackground={{
@@ -21,7 +23,7 @@ export default function ProductHero() {
         alt="s luxury princess suite"
       />
       <Typography color="primary.dark" align="center" variant="h4" marked="center">
-        Unleash Your Inner Royalty
+        { t( "productHero.slogan1" ) }
       </Typography>
       <Typography
         color="secondary.dark"
@@ -29,7 +31,7 @@ export default function ProductHero() {
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-Suiting All Tastes and Preferences
+      { t( "productHero.slogan2" ) }
       </Typography>
       <Button
         color="secondary"
@@ -38,7 +40,7 @@ Suiting All Tastes and Preferences
         component="a"
         sx={{ minWidth: 200 }}
       >
-        Some Info 
+      { t( "productHero.button" ) }
       </Button>
       {/*<Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
       

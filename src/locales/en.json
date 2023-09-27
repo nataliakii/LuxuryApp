@@ -1,0 +1,35 @@
+{
+    "productHero": {
+      "slogan1": " Unleash Your Inner Royalty",
+      "slogan2": "Suiting All Tastes and Preferences",
+      "button": "Get Prices"
+    },
+    "productCategories": {
+      "text": "For all tastes and all desires"
+    },
+    "contacts":{
+      "contacts":"Contacts"
+    },
+    "apModal":{
+      "close":"close",
+      "size": "size",
+      "rf":"Room facilities",
+      "k":"Kitchen",
+      "pb":"Private Bathroom",
+      "ac":"Air-condition",
+      "sw":"Seaview",
+      "gv":"Garden view",
+      "cv":"City view",
+      "tv":"Flat-screen TV",
+      "elb":"extra large double-bed",
+      "db":"double-bed",
+      "sb":"single bed",
+      "of":"Outdoor Facilities:",
+      "b":"Balcony",
+      "t":"Terrace",
+      "p":"Price:",
+      "dates":"Dates",
+      "ms": "Min Stay (nights)",
+      "rate":"Rate (€ per day)"
+    }
+}
