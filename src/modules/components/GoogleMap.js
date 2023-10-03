@@ -1,51 +1,75 @@
-import React, { useState } from 'react';
-import { GoogleMap, Marker } from '@react-google-maps/api';
-import { useLoadScript } from '@react-google-maps/api';
+import React from 'react';
+import { GoogleMap, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+import Button from '@mui/material/Button';
+import DirectionsIcon from '@mui/icons-material/Directions';
 
-const containerStyle = {
-  width: '100%',
-  height: '400px',
-};
-
-
-const GoogleMapComponent = ({location}) => {
-  const [map, setMap] = useState(null);
-
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.GOOGLE_KEY,
-  });
-
-  const onLoad = (map) => {
-    setMap(map);
+const GoogleMapComponent = ({ location }) => {
+  const mapContainerStyle = {
+    width: '100%',
+    height: '300px',
   };
 
-  if (loadError) {
-    return <div>Error loading Google Maps API: {loadError.message}</div>;
-  }
+  const center = {
+    lat: location.lat,
+    lng: location.lng,
+  };
 
-  if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
+  const icon = {
+    url: 'icons/crown.png', 
+    scaledSize: new window.google.maps.Size(40, 40),
+  };
+
+  const directionsService = new window.google.maps.DirectionsService();
+  const directionsRenderer = new window.google.maps.DirectionsRenderer();
+
+  const directionsOptions = {
+    origin: center,
+    destination: 'N. Katsirma 7, Nea Kallikratia 63080 Greece',
+    travelMode: 'DRIVING', 
+  };
 
   return (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={location}
-      zoom={17}
-      onLoad={onLoad}
-    >
-      {map && (
-        <Marker
-          position={location}
-          icon={{
-            url: "/icons/crown.png",
-            scaledSize: new window.google.maps.Size(40, 40),
-            origin: new window.google.maps.Point(0, 0),
-            anchor: new window.google.maps.Point(20, 40),
+    <div>
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        zoom={15}
+        center={center}
+      >
+        <Marker position={center} icon={icon} />
+        <DirectionsService
+          options={directionsOptions}
+          callback={(result, status) => {
+            if (status === 'OK') {
+              directionsRenderer.setDirections(result);
+            }
           }}
         />
-      )}
-    </GoogleMap>
+        <DirectionsRenderer
+          directions={directionsRenderer.directions}
+        />
+
+        <div
+          style={{
+            position: 'absolute',
+            top: '3%',
+            left: '5%',
+            zIndex: 1,
+          }}
+        >
+          <Button
+            variant="contained"
+            sx={{p:2}}
+            color="secondary" 
+            startIcon={<DirectionsIcon />}
+            href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </Button>
+        </div>
+      </GoogleMap>
+    </div>
   );
 };
 

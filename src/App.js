@@ -9,6 +9,7 @@ import withRoot from './modules/withRoot';
 import { I18nextProvider } from "react-i18next";
 import i from "./locales/i18n";
 import { useTranslation } from "react-i18next";
+import ProductSmokingHero from './modules/views/ProductSmokingHero';
 
 function App ()
 {
@@ -22,7 +23,8 @@ function App ()
       <ProductHero />
       <ProductCategories />
       <ProductValues />
-      <Contacts />
+        <Contacts />
+        <ProductSmokingHero />
         <AppFooter />
         </I18nextProvider>
     </React.Fragment>

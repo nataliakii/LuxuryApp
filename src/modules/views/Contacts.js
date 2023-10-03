@@ -31,13 +31,14 @@ const ContactInfo = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: theme.spacing(2),
+  padding: theme.spacing( 2 ),
 }));
 
-const Contacts = () => {
+const Contacts = () =>
+{
   const location = { lat: 40.310630, lng: 23.065669 };
   const phone = "+306998469136";
-  const email = "sluxuryprincess@gmail.com";
+  const email = "vluxurysuitespefkochori@gmail.com";
   const { t, i18n } = useTranslation();
   return (
     <ContactsContainer component="section">
@@ -46,10 +47,18 @@ const Contacts = () => {
           {t("contacts.contacts")}
         </Typography>
         <ContactInfo>
-          <Typography variant="h6" color='whitesmoke'>{phone}</Typography>
-          <div>
-            <Typography variant="h6" color='whitesmoke'>{email}</Typography>
-          </div>
+          <Typography variant="h5"             sx={{
+              fontSize: {
+                xs: 15,
+                sm: 24,
+              },
+            }} color='whitesmoke'>{phone}</Typography>
+          <Typography variant="h5"             sx={{
+              fontSize: {
+                xs: 15,
+                sm: 24,
+              },
+            }} color='whitesmoke'>{email}</Typography>
         </ContactInfo>
         <GoogleMapComponent location={location} />
       </ContactsBox>

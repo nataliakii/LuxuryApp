@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
-import * as React from 'react';
+import React, {useState} from 'react';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Contacts from './Contacts'; 
 import ProductHeroLayout from './ProductHeroLayout';
 import { useTranslation } from "react-i18next";
 const backgroundImage =
@@ -10,6 +14,18 @@ const backgroundImage =
 export default function ProductHero ()
 {
   const { t, i18n } = useTranslation();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to open the modal
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <ProductHeroLayout
       sxBackground={{
@@ -38,15 +54,30 @@ export default function ProductHero ()
         color="secondary"
         variant="contained"
         size="large"
-        component="a"
+        onClick={openModal} 
         sx={{ minWidth: 200 }}
       >
-      { t( "productHero.button" ) }
+        {t('productHero.button')}
       </Button>
-      {/*<Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-      
-              Here
-      </Typography>*/}
+
+      {isModalOpen && (
+      <ContactsModal open={isModalOpen} onClose={closeModal} />
+      )}
     </ProductHeroLayout>
   );
 }
+
+const ContactsModal = ({ open, onClose }) => {
+  return (
+    <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
+      <DialogContent>
+        <Contacts />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onClose} color="primary">
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};  
