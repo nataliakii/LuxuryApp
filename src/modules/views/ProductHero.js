@@ -66,12 +66,12 @@ export default function ProductHero() {
         {t('productHero.button')}
       </Button>
 
-      {isModalOpen && <ContactsModal open={isModalOpen} onClose={closeModal} />}
+      {isModalOpen && <ContactsModal open={isModalOpen} onClose={closeModal} t={t} />}
     </ProductHeroLayout>
   );
 }
 
-function ContactsModal({ open, onClose }) {
+function ContactsModal({ open, onClose,t }) {
   if (!open) return null;
 
   const modalStyles = {
@@ -101,7 +101,7 @@ function ContactsModal({ open, onClose }) {
       <Box style={contentStyles}>
         <Contacts />
         <Button onClick={onClose} color="primary">
-          Close
+          {t("apModal.close")}
         </Button>
       </Box>
     </Box>

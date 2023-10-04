@@ -6,8 +6,9 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import GoogleMapComponent from '../components/GoogleMap';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
-// Define a styled container for the Contacts section
 const ContactsContainer = styled(Container)(({ theme }) => ({
   marginTop: theme.spacing(8),
   marginBottom: theme.spacing(4),
@@ -38,7 +39,14 @@ function Contacts() {
   const location = { lat: 40.31063, lng: 23.065669 };
   const phone = '+306998469136';
   const email = 'vluxurysuitespefkochori@gmail.com';
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${phone}`;
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${email}`;
+  };
   return (
     <ContactsContainer component="section">
       <ContactsBox>
@@ -60,9 +68,20 @@ function Contacts() {
                 xs: 19,
                 sm: 24,
               },
+              p: 1,
+              //alignItems: 'center',
+              cursor: 'pointer',
+              border: '1px solid transparent',
+              '&:hover': {
+                border: '1px solid',
+                borderColor: 'secondary.light',
+                padding: '4px',
+              },
             }}
             color="whitesmoke"
+            onClick={handlePhoneClick}
           >
+            <PhoneIcon sx={{ mr: '6px', mb: '-3px' }} />
             {phone}
           </Typography>
           <Typography
@@ -72,9 +91,19 @@ function Contacts() {
                 xs: 19,
                 sm: 24,
               },
+              p: 1,
+              cursor: 'pointer',
+              border: '1px solid transparent',
+              '&:hover': {
+                border: '1px solid',
+                borderColor: 'secondary.light',
+                padding: '4px',
+              },
             }}
             color="whitesmoke"
+            onClick={handleEmailClick}
           >
+            <EmailIcon sx={{ mr: '6px', mb: '-3px' }} />
             {email}
           </Typography>
         </ContactInfo>
