@@ -5,9 +5,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
-import GoogleMapComponent from '../components/GoogleMap';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+
+import GoogleMapComponent from '../components/GoogleMap';
 
 const ContactsContainer = styled(Container)(({ theme }) => ({
   marginTop: theme.spacing(8),
@@ -69,7 +70,7 @@ function Contacts() {
                 sm: 24,
               },
               p: 1,
-              //alignItems: 'center',
+              // alignItems: 'center',
               cursor: 'pointer',
               border: '1px solid transparent',
               '&:hover': {
