@@ -1,32 +1,43 @@
 import React from 'react';
 import {
-  Table,
-  TableBody,
-  TableCell,
   TableContainer,
+  Table,
   TableHead,
   TableRow,
+  TableCell,
+  TableBody,
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-const PriceTable = ({ prices, t}) => {
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:hover': {
+    backgroundColor: theme.palette.secondary.light,
+  },
+}));
+
+const PriceTable = ({ prices, t }) => {
   return (
     <TableContainer>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>{ t( "apModal.dates" ) }</TableCell>
-            <TableCell>{ t( "apModal.ms" ) } (nights)</TableCell>
-            <TableCell>{ t( "apModal.rate" ) }(€ per day)</TableCell>
+            <TableCell>{t('apModal.dates')}</TableCell>
+            <TableCell>{t('apModal.ms')} </TableCell>
+            <TableCell>{t('apModal.rate')}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {prices.map((priceInfo, index) => (
-            <TableRow key={index}>
+            <StyledTableRow key={index}>
               <TableCell>{priceInfo.dates}</TableCell>
               <TableCell>{priceInfo.minStay}</TableCell>
               <TableCell>€{priceInfo.rate}</TableCell>
-            </TableRow>
+            </StyledTableRow>
           ))}
+          <StyledTableRow>
+            <TableCell colSpan={2}>{t('apModal.transfer')}</TableCell>
+            <TableCell>€45</TableCell>
+          </StyledTableRow>
         </TableBody>
       </Table>
     </TableContainer>

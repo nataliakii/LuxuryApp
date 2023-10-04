@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { GoogleMap, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+import {
+  GoogleMap,
+  Marker,
+  DirectionsService,
+  DirectionsRenderer,
+} from '@react-google-maps/api';
 import Button from '@mui/material/Button';
 import DirectionsIcon from '@mui/icons-material/Directions';
 
@@ -16,7 +21,7 @@ const GoogleMapComponent = ({ location }) => {
   };
 
   const icon = {
-    url: 'icons/crown.png', 
+    url: 'icons/crown.png',
     scaledSize: new window.google.maps.Size(40, 40),
   };
 
@@ -26,7 +31,7 @@ const GoogleMapComponent = ({ location }) => {
   const directionsOptions = {
     origin: center,
     destination: 'N. Katsirma 7, Nea Kallikratia 63080 Greece',
-    travelMode: 'DRIVING', 
+    travelMode: 'DRIVING',
   };
 
   return (
@@ -45,9 +50,7 @@ const GoogleMapComponent = ({ location }) => {
             }
           }}
         />
-        <DirectionsRenderer
-          directions={directionsRenderer.directions}
-        />
+        <DirectionsRenderer directions={directionsRenderer.directions} />
 
         <div
           style={{
@@ -59,8 +62,8 @@ const GoogleMapComponent = ({ location }) => {
         >
           <Button
             variant="contained"
-            sx={{p:2}}
-            color="secondary" 
+            sx={{ p: 2 }}
+            color="secondary"
             startIcon={<DirectionsIcon />}
             href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
             target="_blank"

@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, {useState} from 'react';
 import Button from '../components/Button';
+import Box from '@mui/material/Box';
 import Typography from '../components/Typography';
+import Modal from '@mui/material/Modal';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
@@ -68,16 +70,38 @@ export default function ProductHero ()
 }
 
 const ContactsModal = ({ open, onClose }) => {
+  if (!open) return null;
+
+  const modalStyles = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 9999,
+  };
+
+  const contentStyles = {
+    backgroundColor: '#fff',
+    padding: '0px',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    overflowY: 'auto',
+  };
+
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-      <DialogContent>
+    <Box style={modalStyles} onClick={onClose}>
+      <Box style={contentStyles}>
         <Contacts />
-      </DialogContent>
-      <DialogActions>
         <Button onClick={onClose} color="primary">
           Close
         </Button>
-      </DialogActions>
-    </Dialog>
+      </Box>
+    </Box>
   );
-};  
+};

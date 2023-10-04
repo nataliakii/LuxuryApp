@@ -4,15 +4,17 @@ import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
 
-
 function Copyright() {
   return (
     <React.Fragment>
-      {'© NataliaKi '} 
-      <Link color="secondary.dark" href="https://lambent-bubblegum-7bc6b5.netlify.app">
-        S.Luxury Princess Suite 
+      {new Date().getFullYear()}{' '}
+      <Link
+        color="secondary.dark"
+        href="https://lambent-bubblegum-7bc6b5.netlify.app"
+      >
+        {'All rights reserved.'}
       </Link>{' '}
-      {new Date().getFullYear()}
+      {'© NataliaKi '}
     </React.Fragment>
   );
 }
@@ -30,25 +32,31 @@ function Copyright() {
 //  },
 //};
 
-
 function AppFooter() {
   return (
     <Typography
       component="footer"
       sx={{
         display: 'flex',
-        alignItems: 'center', 
-        justifyContent: 'center', 
+        alignItems: 'center',
+        justifyContent: 'center',
         bgcolor: 'secondary.light',
       }}
     >
-    <Container sx={{ my: 8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <Grid item>
-                <Copyright />
-            </Grid>
+      <Container
+        sx={{
+          my: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <Grid item>
+          <Copyright />
+        </Grid>
       </Container>
     </Typography>
   );
 }
 
-export default AppFooter
+export default AppFooter;
