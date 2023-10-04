@@ -3,6 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  globals: {
+    test: 'readonly',
+    React: 'readonly',
+    expect: 'readonly',
+  },
   extends: ['airbnb', 'eslint:recommended', 'plugin:prettier/recommended'],
   overrides: [
     {
@@ -19,6 +24,16 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'react/require-default-props': [
+      'error',
+      { ignoreFunctionalComponents: true },
+    ],
+    'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'no-unused-vars': 'off',
+  },
   plugins: ['prettier'],
 };

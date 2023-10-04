@@ -54,10 +54,10 @@ function Snackbar(props) {
       autoHideDuration={6000}
       TransitionComponent={Transition}
       message={
-        <React.Fragment>
+        <>
           <InfoIcon className={classes.info} />
           <span>{message}</span>
-        </React.Fragment>
+        </>
       }
       action={[
         <IconButton

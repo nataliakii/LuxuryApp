@@ -1,5 +1,4 @@
 // Assuming you are using fetch to load the JSON file
-import InitialData from '../../InitialData';
 import React, { useEffect, useState } from 'react';
 import {
   Button,
@@ -14,15 +13,16 @@ import {
 import { styled } from '@mui/material/styles';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import PriceTable from '../components/PriceTable';
 import { useTranslation } from 'react-i18next';
+import PriceTable from '../components/PriceTable';
+import InitialData from '../../InitialData';
 
 const fetchApartmentDataById = (apartmentId) => {
   const apartment = InitialData.find((apt) => apt.id === apartmentId);
   return apartment || null;
 };
 
-const ApartmentModal = ({ apartmentId, onClose }) => {
+function ApartmentModal({ apartmentId, onClose }) {
   const [apartment, setApartment] = useState(null);
   const { t, i18n } = useTranslation();
 
@@ -46,7 +46,7 @@ const ApartmentModal = ({ apartmentId, onClose }) => {
       </Dialog>
     </div>
   );
-};
+}
 
 export default ApartmentModal;
 
@@ -102,7 +102,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold', // Make the text bold (adjust as needed)
 }));
 
-const ApartmentCard = ({ apartment, t, i18n }) => {
+function ApartmentCard({ apartment, t, i18n }) {
   return (
     <Root>
       <Paper elevation={3} component={CarouselContainer}>
@@ -121,7 +121,7 @@ const ApartmentCard = ({ apartment, t, i18n }) => {
             }
 
             return (
-              <div key={index}>
+              <div key={img.src}>
                 <img
                   src={photo}
                   alt={`Apartment ${apartment.name}`}
@@ -251,4 +251,4 @@ const ApartmentCard = ({ apartment, t, i18n }) => {
       </Grid>
     </Root>
   );
-};
+}

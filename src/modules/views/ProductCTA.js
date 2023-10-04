@@ -32,7 +32,11 @@ function ProductCTA() {
               px: 3,
             }}
           >
-            <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
+            <Box
+              component="form"
+              onSubmit={handleSubmit}
+              sx={{ maxWidth: 400 }}
+            >
               <Typography variant="h2" component="h2" gutterBottom>
                 Receive offers
               </Typography>

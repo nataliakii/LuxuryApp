@@ -1,15 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
+import { ButtonBase, Box, Container } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import Typography from '../components/Typography';
 import ApartmentModal from './ApartmentModal';
-import {
-    ButtonBase,
-    Box,
-    Container
-} from '@mui/material';
-import InitialData from "../../InitialData";
-import { useTranslation } from "react-i18next";
+import InitialData from '../../InitialData';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -57,38 +53,35 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },
-} ) );
+}));
 
 const widths = ['40%', '20%', '40%', '38%', '38%', '24%', '40%', '20%', '40%'];
 
 const mapApartmentsToImages = (apartments) => {
-    return apartments.map((apartment, index) => ({
-      url: apartment.photos[0], 
-      title: apartment.name, 
-      width: widths[index],
-      id: apartment.id, 
-    }));
-  };
+  return apartments.map((apartment, index) => ({
+    url: apartment.photos[0],
+    title: apartment.name,
+    width: widths[index],
+    id: apartment.id,
+  }));
+};
 
-
-
-export default function ProductCategories ()
-{
-    const [ selectedApartmentId, setSelectedApartmentId ] = useState( null );
-  const images = mapApartmentsToImages( InitialData );
+export default function ProductCategories() {
+  const [selectedApartmentId, setSelectedApartmentId] = useState(null);
+  const images = mapApartmentsToImages(InitialData);
   const { t, i18n } = useTranslation();
 
-    const openApartmentModal = (apartmentId) => {
-      setSelectedApartmentId(apartmentId);
-    };
-  
-    const closeApartmentModal = () => {
-      setSelectedApartmentId(null);
-    };
+  const openApartmentModal = (apartmentId) => {
+    setSelectedApartmentId(apartmentId);
+  };
+
+  const closeApartmentModal = () => {
+    setSelectedApartmentId(null);
+  };
   return (
     <Container component="section" sx={{ mt: 8, mb: 4 }}>
       <Typography variant="h4" marked="center" align="center" component="h2">
-      {t("productCategories.text")}
+        {t('productCategories.text')}
       </Typography>
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (
@@ -96,8 +89,8 @@ export default function ProductCategories ()
             key={image.title}
             style={{
               width: image.width,
-            } }
-            onClick={() => openApartmentModal(image.id)} 
+            }}
+            onClick={() => openApartmentModal(image.id)}
           >
             <Box
               sx={{
@@ -111,7 +104,7 @@ export default function ProductCategories ()
                 backgroundImage: `url(${image.url})`,
               }}
             />
-                <ImageBackdrop className="imageBackdrop" />
+            <ImageBackdrop className="imageBackdrop" />
             <Box
               sx={{
                 position: 'absolute',
@@ -137,8 +130,8 @@ export default function ProductCategories ()
             </Box>
           </ImageIconButton>
         ))}
-          </Box>
-          {selectedApartmentId && (
+      </Box>
+      {selectedApartmentId && (
         <ApartmentModal
           apartmentId={selectedApartmentId}
           onClose={closeApartmentModal}

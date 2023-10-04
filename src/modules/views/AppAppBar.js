@@ -2,16 +2,15 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import AppBar from '../components/AppBar';
-import Toolbar from '../components/Toolbar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import LanguageIcon from '@mui/icons-material/Language';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
+import Toolbar from '../components/Toolbar';
+import AppBar from '../components/AppBar';
 
-
-function AppAppBar({setLanguage, language}) {
+function AppAppBar({ setLanguage, language }) {
   const [anchorEl, setAnchorEl] = React.useState(null); // State for the anchor element of the menu
   const { i18n } = useTranslation();
   const handleClick = (event) => {
@@ -23,7 +22,7 @@ function AppAppBar({setLanguage, language}) {
   };
 
   const handleLanguageChange = (event) => {
-    setLanguage( event );
+    setLanguage(event);
     i18n.changeLanguage(event);
     handleClose();
   };
@@ -48,10 +47,7 @@ function AppAppBar({setLanguage, language}) {
             S. LUXURY PRINCESS SUITE
           </Link>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
-            <IconButton
-              color="inherit"
-              onClick={handleClick}
-            >
+            <IconButton color="inherit" onClick={handleClick}>
               <LanguageIcon />
             </IconButton>
             <Menu
@@ -59,8 +55,12 @@ function AppAppBar({setLanguage, language}) {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={() => handleLanguageChange("en")}>English</MenuItem>
-              <MenuItem onClick={() => handleLanguageChange("el")}>Ελληνικά</MenuItem>
+              <MenuItem onClick={() => handleLanguageChange('en')}>
+                English
+              </MenuItem>
+              <MenuItem onClick={() => handleLanguageChange('el')}>
+                Ελληνικά
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

@@ -1,20 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React, {useState} from 'react';
-import Button from '../components/Button';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Typography from '../components/Typography';
 import Modal from '@mui/material/Modal';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
-import Contacts from './Contacts'; 
+import { useTranslation } from 'react-i18next';
+import Contacts from './Contacts';
 import ProductHeroLayout from './ProductHeroLayout';
-import { useTranslation } from "react-i18next";
-const backgroundImage =
-  '/b2.jpg';
+import Typography from '../components/Typography';
+import Button from '../components/Button';
 
-export default function ProductHero ()
-{
+const backgroundImage = '/b2.jpg';
+
+export default function ProductHero() {
   const { t, i18n } = useTranslation();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +31,7 @@ export default function ProductHero ()
     <ProductHeroLayout
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#7fc7d9', 
+        backgroundColor: '#7fc7d9',
         backgroundPosition: 'center',
       }}
     >
@@ -41,8 +40,13 @@ export default function ProductHero ()
         src={backgroundImage}
         alt="s luxury princess suite"
       />
-      <Typography color="primary.dark" align="center" variant="h4" marked="center">
-        { t( "productHero.slogan1" ) }
+      <Typography
+        color="primary.dark"
+        align="center"
+        variant="h4"
+        marked="center"
+      >
+        {t('productHero.slogan1')}
       </Typography>
       <Typography
         color="secondary.dark"
@@ -50,26 +54,24 @@ export default function ProductHero ()
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-      { t( "productHero.slogan2" ) }
+        {t('productHero.slogan2')}
       </Typography>
       <Button
         color="secondary"
         variant="contained"
         size="large"
-        onClick={openModal} 
+        onClick={openModal}
         sx={{ minWidth: 200 }}
       >
         {t('productHero.button')}
       </Button>
 
-      {isModalOpen && (
-      <ContactsModal open={isModalOpen} onClose={closeModal} />
-      )}
+      {isModalOpen && <ContactsModal open={isModalOpen} onClose={closeModal} />}
     </ProductHeroLayout>
   );
 }
 
-const ContactsModal = ({ open, onClose }) => {
+function ContactsModal({ open, onClose }) {
   if (!open) return null;
 
   const modalStyles = {
@@ -104,4 +106,4 @@ const ContactsModal = ({ open, onClose }) => {
       </Box>
     </Box>
   );
-};
+}

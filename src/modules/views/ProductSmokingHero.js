@@ -2,8 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Typography from '../components/Typography';
 import { useTranslation } from 'react-i18next';
+import Typography from '../components/Typography';
 
 function ProductSmokingHero() {
   const { t } = useTranslation();

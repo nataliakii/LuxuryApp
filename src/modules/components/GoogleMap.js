@@ -9,7 +9,7 @@ import {
 import Button from '@mui/material/Button';
 import DirectionsIcon from '@mui/icons-material/Directions';
 
-const GoogleMapComponent = ({ location }) => {
+function GoogleMapComponent({ location }) {
   const mapContainerStyle = {
     width: '100%',
     height: '300px',
@@ -75,6 +75,6 @@ const GoogleMapComponent = ({ location }) => {
       </GoogleMap>
     </div>
   );
-};
+}
 
 export default GoogleMapComponent;

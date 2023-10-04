@@ -4,8 +4,8 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import GoogleMapComponent from '../components/GoogleMap';
 import { useTranslation } from 'react-i18next';
+import GoogleMapComponent from '../components/GoogleMap';
 
 // Define a styled container for the Contacts section
 const ContactsContainer = styled(Container)(({ theme }) => ({
@@ -34,7 +34,7 @@ const ContactInfo = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-const Contacts = () => {
+function Contacts() {
   const location = { lat: 40.31063, lng: 23.065669 };
   const phone = '+306998469136';
   const email = 'vluxurysuitespefkochori@gmail.com';
@@ -82,6 +82,6 @@ const Contacts = () => {
       </ContactsBox>
     </ContactsContainer>
   );
-};
+}
 
 export default Contacts;

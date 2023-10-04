@@ -6,20 +6,20 @@ import Typography from '../components/Typography';
 
 function Copyright() {
   return (
-    <React.Fragment>
+    <>
       {new Date().getFullYear()}{' '}
       <Link
         color="secondary.dark"
         href="https://lambent-bubblegum-7bc6b5.netlify.app"
       >
-        {'All rights reserved.'}
+        All rights reserved.
       </Link>{' '}
       {'© NataliaKi '}
-    </React.Fragment>
+    </>
   );
 }
 
-//const iconStyle = {
+// const iconStyle = {
 //  width: 48,
 //  height: 48,
 //  display: 'flex',
@@ -30,7 +30,7 @@ function Copyright() {
 //  '&:hover': {
 //    bgcolor: 'warning.dark',
 //  },
-//};
+// };
 
 function AppFooter() {
   return (

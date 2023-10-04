@@ -15,7 +15,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-const PriceTable = ({ prices, t }) => {
+function PriceTable({ prices, t }) {
   return (
     <TableContainer>
       <Table>
@@ -28,7 +28,7 @@ const PriceTable = ({ prices, t }) => {
         </TableHead>
         <TableBody>
           {prices.map((priceInfo, index) => (
-            <StyledTableRow key={index}>
+            <StyledTableRow key={priceInfo.dates}>
               <TableCell>{priceInfo.dates}</TableCell>
               <TableCell>{priceInfo.minStay}</TableCell>
               <TableCell>€{priceInfo.rate}</TableCell>
@@ -42,6 +42,6 @@ const PriceTable = ({ prices, t }) => {
       </Table>
     </TableContainer>
   );
-};
+}
 
 export default PriceTable;
