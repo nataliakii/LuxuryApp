@@ -10,7 +10,7 @@ function Copyright() {
       {new Date().getFullYear()}{' '}
       <Link
         color="secondary.dark"
-        href="https://lambent-bubblegum-7bc6b5.netlify.app"
+        href="https://www.linkedin.com/in/natalia-kirejeva/"
       >
         All rights reserved.
       </Link>{' '}

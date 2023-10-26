@@ -30,7 +30,11 @@ function ProductSmokingHero() {
         target="_blank"
         rel="perfochory v luxury suite"
       >
-        <Typography variant="h4" component="span">
+        <Typography
+          variant="h4"
+          component="span"
+          sx={{ alignItems: 'center', justifyContent: 'center' }}
+        >
           {t('smoking.text1')}
         </Typography>
       </Button>
@@ -39,7 +43,11 @@ function ProductSmokingHero() {
         component="a"
         target="_blank"
         href="http://vluxurysuites.gr/"
-        sx={{ my: 4 }}
+        sx={{
+          my: 4,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       >
         {t('smoking.text2')}
       </Typography>

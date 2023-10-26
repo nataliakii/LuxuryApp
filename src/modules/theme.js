@@ -27,6 +27,9 @@ const rawTheme = createTheme({
       main: green[500],
       dark: green[700],
     },
+    text: {
+      primary: '#102943',
+    },
   },
   typography: {
     fontFamily: "'Work Sans', sans-serif",
@@ -79,7 +82,7 @@ const theme = {
       fontSize: 36,
     },
     h5: {
-      ...rawTheme.typography.h5,
+      ...rawTheme.typography,
       fontSize: 25,
       fontWeight: rawTheme.typography.fontWeightLight,
     },
