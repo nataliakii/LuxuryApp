@@ -60,7 +60,8 @@ function Contacts() {
           align="center"
           component="h3"
           color="whitesmoke"
-          mb={5}
+          mb={1}
+          mt={3}
         >
           {t('contacts.contacts')}
         </Typography>
