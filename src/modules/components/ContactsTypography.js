@@ -7,10 +7,11 @@ import LocationOn from '@mui/icons-material/LocationOn';
 function ContactsTypography({ variant, text, icon, onClick, color }) {
   const iconStyles = {
     fontSize: {
-      xs: 19,
+      xs: 15.5,
       sm: 24,
     },
     p: 1,
+    ml: -1,
     cursor: 'pointer',
     border: '1px solid transparent',
     '&:hover': {

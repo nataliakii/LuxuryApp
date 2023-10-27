@@ -60,8 +60,7 @@ function Contacts() {
           align="center"
           component="h3"
           color="whitesmoke"
-          mb={1}
-          mt={3}
+          sx={{ mb: 1, mt: 3 }}
         >
           {t('contacts.contacts')}
         </Typography>
@@ -69,21 +68,21 @@ function Contacts() {
           <ContactsTypography
             variant="h5"
             text={phone}
-            icon={<PhoneIcon sx={{ mr: '6px', mb: '-3px' }} />}
+            icon={<PhoneIcon sx={{ mr: '5px', mb: '-3px' }} />}
             onClick={handlePhoneClick}
             color="whitesmoke"
           />
           <ContactsTypography
-            variant="h5"
+            variant=" body2"
             text={email}
-            icon={<EmailIcon sx={{ mr: '6px', mb: '-3px' }} />}
+            icon={<EmailIcon sx={{ mr: '5px', mb: '-3px' }} />}
             onClick={handleEmailClick}
             color="whitesmoke"
           />
           <ContactsTypography
             variant="h5"
             text={address}
-            icon={<LocationOn sx={{ mr: '6px', mb: '-3px' }} />}
+            icon={<LocationOn sx={{ mr: '5px', mb: '-3px' }} />}
             onClick={() =>
               window.open(getDirectionsURL, '_blank', 'noopener noreferrer')
             }
