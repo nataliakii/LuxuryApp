@@ -4,7 +4,7 @@ import {
   Table,
   TableHead,
   TableRow,
-  TableCell,
+  TableCell as MuiTableCell,
   TableBody,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -13,6 +13,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:hover': {
     backgroundColor: theme.palette.secondary.light,
   },
+}));
+
+const TableCell = styled(MuiTableCell)(({ theme }) => ({
+  fontSize: '1.2rem',
 }));
 
 function PriceTable({ prices, t }) {

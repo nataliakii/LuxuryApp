@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { Element } from 'react-scroll';
 import { styled } from '@mui/material/styles';
 import { Container, Button, Box, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
@@ -52,57 +53,59 @@ function Contacts() {
     window.location.href = `mailto:${email}`;
   };
   return (
-    <ContactsContainer component="section">
-      <ContactsBox>
-        <Typography
-          variant="h3"
-          marked="center"
-          align="center"
-          component="h3"
-          color="whitesmoke"
-          sx={{ mb: 1, mt: 3 }}
-        >
-          {t('contacts.contacts')}
-        </Typography>
-        <ContactInfo>
-          <ContactsTypography
-            variant="h5"
-            text={phone}
-            icon={<PhoneIcon sx={{ mr: '5px', mb: '-3px' }} />}
-            onClick={handlePhoneClick}
+    <Element name="contacts">
+      <ContactsContainer component="section">
+        <ContactsBox>
+          <Typography
+            variant="h3"
+            marked="center"
+            align="center"
+            component="h3"
             color="whitesmoke"
-          />
-          <ContactsTypography
-            variant=" body2"
-            text={email}
-            icon={<EmailIcon sx={{ mr: '5px', mb: '-3px' }} />}
-            onClick={handleEmailClick}
-            color="whitesmoke"
-          />
-          <ContactsTypography
-            variant="h5"
-            text={address}
-            icon={<LocationOn sx={{ mr: '5px', mb: '-3px' }} />}
-            onClick={() =>
-              window.open(getDirectionsURL, '_blank', 'noopener noreferrer')
-            }
-            color="whitesmoke"
-          />
-        </ContactInfo>
-        <Button
-          variant="contained"
-          sx={{ p: 2, width: '100%', marginTop: 2 }}
-          color="secondary"
-          startIcon={<DirectionsIcon />}
-          href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get Directions
-        </Button>
-        {/* <GoogleMapComponent location={location} /> */}
-      </ContactsBox>
-    </ContactsContainer>
+            sx={{ mb: 1, mt: 3 }}
+          >
+            {t('contacts.contacts')}
+          </Typography>
+          <ContactInfo>
+            <ContactsTypography
+              variant="h5"
+              text={phone}
+              icon={<PhoneIcon sx={{ mr: '5px', mb: '-3px' }} />}
+              onClick={handlePhoneClick}
+              color="whitesmoke"
+            />
+            <ContactsTypography
+              variant=" body2"
+              text={email}
+              icon={<EmailIcon sx={{ mr: '5px', mb: '-3px' }} />}
+              onClick={handleEmailClick}
+              color="whitesmoke"
+            />
+            <ContactsTypography
+              variant="h5"
+              text={address}
+              icon={<LocationOn sx={{ mr: '5px', mb: '-3px' }} />}
+              onClick={() =>
+                window.open(getDirectionsURL, '_blank', 'noopener noreferrer')
+              }
+              color="whitesmoke"
+            />
+          </ContactInfo>
+          <Button
+            variant="contained"
+            sx={{ p: 2, width: '100%', marginTop: 2 }}
+            color="secondary"
+            startIcon={<DirectionsIcon />}
+            href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </Button>
+          {/* <GoogleMapComponent location={location} /> */}
+        </ContactsBox>
+      </ContactsContainer>
+    </Element>
   );
 }
 

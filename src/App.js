@@ -9,6 +9,7 @@ import Contacts from './modules/views/Contacts';
 import withRoot from './modules/withRoot';
 import i from './locales/i18n';
 import ProductSmokingHero from './modules/views/ProductSmokingHero';
+import ScrollButton from './modules/components/ScrollButton';
 
 function App() {
   const { i18n } = useTranslation();
@@ -22,6 +23,7 @@ function App() {
       <Contacts />
       <ProductSmokingHero />
       <AppFooter />
+      <ScrollButton />
     </I18nextProvider>
   );
 }

@@ -1,10 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
+import { scroller } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import Contacts from './Contacts';
 import ProductHeroLayout from './ProductHeroLayout';
@@ -60,7 +57,12 @@ export default function ProductHero() {
         color="secondary"
         variant="contained"
         size="large"
-        onClick={openModal}
+        onClick={scroller.scrollTo('contacts', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+          offset: -50,
+        })}
         sx={{ minWidth: 200 }}
       >
         {t('productHero.button')}
