@@ -24,6 +24,14 @@ export default function ProductHero() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  const handleOnClick = () => {
+    scroller.scrollTo('contacts', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -50,
+    });
+  };
   return (
     <ProductHeroLayout
       sxBackground={{
@@ -57,12 +65,7 @@ export default function ProductHero() {
         color="secondary"
         variant="contained"
         size="large"
-        onClick={scroller.scrollTo('contacts', {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart',
-          offset: -50,
-        })}
+        onClick={handleOnClick}
         sx={{ minWidth: 200 }}
       >
         {t('productHero.button')}

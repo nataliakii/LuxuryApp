@@ -38,7 +38,13 @@ function AppFooter() {
           <Copyright />
         </Grid>
         <ProductLogo setIsModalOpen={setIsModalOpen} />
-        {isModalOpen && <PModal open={isModalOpen} onClose={closeModal} />}
+        {isModalOpen && (
+          <PModal
+            open={isModalOpen}
+            onClose={closeModal}
+            closeModal={closeModal}
+          />
+        )}
       </Container>
     </Typography>
   );
@@ -46,7 +52,7 @@ function AppFooter() {
 
 export default AppFooter;
 
-function PModal({ open, onClose }) {
+function PModal({ open, onClose, closeModal }) {
   if (!open) return null;
 
   const modalStyles = {
@@ -76,7 +82,7 @@ function PModal({ open, onClose }) {
   return (
     <Box style={modalStyles}>
       <Box style={contentStyles}>
-        <Presentation />
+        <Presentation closeModal={closeModal} />
         <Button onClick={onClose} color="primary">
           Close
         </Button>
@@ -95,7 +101,7 @@ function Copyright() {
       >
         All rights reserved.
       </Link>{' '}
-      {'© NataliaKi '}
+      <p>Powered by {'© NataliaKi '}</p>
     </>
   );
 }
