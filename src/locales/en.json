@@ -12,8 +12,8 @@
   },
   "apModal": {
     "close": "close",
-    "size": "size",
-    "rf": "Room facilities",
+    "size": "Size",
+    "rf": "Room facilities:",
     "k": "Kitchen",
     "pb": "Private Bathroom",
     "ac": "Air-condition",
@@ -27,7 +27,7 @@
     "of": "Outdoor Facilities:",
     "b": "Balcony",
     "t": "Terrace",
-    "p": "Price:",
+    "p": "Prices:",
     "dates": "Dates",
     "ms": "Min Stay (nights)",
     "rate": "Rate (per day)",
@@ -35,6 +35,6 @@
   },
   "smoking": {
     "text1": "Need more ideas for your IDEAL holiday?",
-    "text2": "Check out our hotel in Perfochory!"
+    "text2": "Check out our hotel in Pefkochory!"
   }
 }

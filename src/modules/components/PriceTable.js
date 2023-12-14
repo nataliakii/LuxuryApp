@@ -16,7 +16,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const TableCell = styled(MuiTableCell)(({ theme }) => ({
-  fontSize: '1.2rem',
+  fontSize: '0.85rem',
+  lineHeight: '0.9rem',
 }));
 
 function PriceTable({ prices, t }) {

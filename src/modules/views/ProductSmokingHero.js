@@ -14,6 +14,8 @@ function ProductSmokingHero() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
         my: 9,
       }}
     >
@@ -38,6 +40,7 @@ function ProductSmokingHero() {
           {t('smoking.text1')}
         </Typography>
       </Button>
+
       <Typography
         variant="h5"
         component="a"
@@ -51,10 +54,11 @@ function ProductSmokingHero() {
       >
         {t('smoking.text2')}
       </Typography>
+
       <Box
         component="img"
         src="/icons/productBuoy.svg"
-        alt="buoy"
+        alt="perfochory v luxury suite"
         sx={{ width: 60 }}
       />
     </Container>
