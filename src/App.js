@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { I18nextProvider, useTranslation } from 'react-i18next';
-import ProductCategories from './modules/views/ProductCategories';
+import Apartments from './modules/views/Apartments';
 import AppFooter from './modules/views/AppFooter';
 import ProductHero from './modules/views/ProductHero';
 import ProductValues from './modules/views/ProductValues';
@@ -18,7 +18,7 @@ function App() {
     <I18nextProvider i18n={i}>
       <AppAppBar setLanguage={setLanguage} language={language} />
       <ProductHero />
-      <ProductCategories />
+      <Apartments />
       <ProductValues />
       <Contacts />
       <ProductSmokingHero />

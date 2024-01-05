@@ -28,15 +28,12 @@ function AppFooter() {
     >
       <Container
         sx={{
-          my: 8,
+          my: 4,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
         }}
       >
-        <Grid item>
-          <Copyright />
-        </Grid>
         <ProductLogo setIsModalOpen={setIsModalOpen} />
         {isModalOpen && (
           <PModal
@@ -45,6 +42,9 @@ function AppFooter() {
             closeModal={closeModal}
           />
         )}
+        <Grid item>
+          <Copyright />
+        </Grid>
       </Container>
     </Typography>
   );
@@ -94,14 +94,14 @@ function PModal({ open, onClose, closeModal }) {
 function Copyright() {
   return (
     <>
-      {new Date().getFullYear()}{' '}
+      {new Date().getFullYear()} All rights reserved.
       <Link
-        color="secondary.dark"
+        color="secondary.main"
+        sx={{ lineHeight: '1rem' }}
         href="https://www.linkedin.com/in/natalia-kirejeva/"
       >
-        All rights reserved.
+        <p>Powered by {'© NataliaKi '}</p>
       </Link>{' '}
-      <p>Powered by {'© NataliaKi '}</p>
     </>
   );
 }

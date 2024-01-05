@@ -24,8 +24,16 @@ export default function ProductHero() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  const handleOnClick = () => {
+  const handleOnClickContact = () => {
     scroller.scrollTo('contacts', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -50,
+    });
+  };
+  const handleOnClickApartments = () => {
+    scroller.scrollTo('apartments', {
       duration: 800,
       delay: 0,
       smooth: 'easeInOutQuart',
@@ -65,52 +73,61 @@ export default function ProductHero() {
         color="secondary"
         variant="contained"
         size="large"
-        onClick={handleOnClick}
+        onClick={handleOnClickContact}
         sx={{ minWidth: 200 }}
       >
         {t('productHero.button')}
       </Button>
+      <Button
+        color="secondary"
+        variant="contained"
+        size="large"
+        onClick={handleOnClickApartments}
+        sx={{ minWidth: 200, my: 2 }}
+      >
+        Explore apartments
+      </Button>
 
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <ContactsModal open={isModalOpen} onClose={closeModal} t={t} />
-      )}
+      )} */}
     </ProductHeroLayout>
   );
 }
 
-function ContactsModal({ open, onClose, t }) {
-  if (!open) return null;
+// function ContactsModal({ open, onClose, t }) {
+//   if (!open) return null;
 
-  const modalStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: 9999,
-  };
+//   const modalStyles = {
+//     display: "flex",
+//     flexDirection: "column",
+//     alignItems: "center",
+//     justifyContent: "center",
+//     position: "fixed",
+//     top: 0,
+//     left: 0,
+//     width: "100%",
+//     height: "100%",
+//     backgroundColor: "rgba(0, 0, 0, 0.5)",
+//     zIndex: 9999,
+//   };
 
-  const contentStyles = {
-    backgroundColor: '#fff',
-    padding: '0px',
-    maxWidth: '100%',
-    maxHeight: '100%',
-    overflowY: 'auto',
-  };
+//   const contentStyles = {
+//     backgroundColor: "#fff",
+//     padding: "0px",
+//     maxWidth: "100%",
+//     maxHeight: "100%",
+//     overflowY: "auto",
+//   };
 
-  return (
-    <Box style={modalStyles} onClick={onClose}>
-      <Box style={contentStyles}>
-        <Contacts />
-        <Button onClick={onClose} color="primary">
-          {t('apModal.close')}
-        </Button>
-      </Box>
-    </Box>
-  );
-}
+//   return (
+//     <Box style={modalStyles} onClick={onClose}>
+//       <Box style={contentStyles}>
+//         <Contacts />
+//         <Button onClick={onClose} color="primary">
+//           {t("apModal.close")}
+//         </Button>
+//       </Box>
+//     </Box>
+//   );
+// }
