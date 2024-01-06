@@ -8,7 +8,7 @@ const Toolbar = styled(MuiToolbar)(({ theme }) => ({
     height: 70, // Adjusted height for screens of 'sm' breakpoint and larger
   },
   [theme.breakpoints.down('sm')]: {
-    height: 96, // Adjusted height for screens smaller than 'sm' breakpoint
+    height: 36, // Adjusted height for screens smaller than 'sm' breakpoint
     fontSize: 14, // Adjusted font size for smaller screens
   },
 }));

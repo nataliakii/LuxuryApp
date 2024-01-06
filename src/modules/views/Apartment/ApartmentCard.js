@@ -3,8 +3,7 @@ import { Typography, Paper, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
-import PriceTable from './PriceTable';
+import PriceTable from '../../components/PriceTable';
 
 const sectionHeadingStyle = {
   fontWeight: 'bold',
@@ -53,9 +52,9 @@ const IconImage = styled('img')({
 });
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
-  borderBottom: `1px solid ${theme.palette.secondary.main}`, // Bottom border color
-  paddingBottom: '3px', // Adjust padding as needed
-  fontWeight: 'bold', // Make the text bold (adjust as needed)
+  borderBottom: `1px solid ${theme.palette.secondary.main}`,
+  paddingBottom: '3px',
+  fontWeight: 'bold',
 }));
 
 export default function ApartmentCard({ apartment, t, i18n }) {
@@ -67,7 +66,6 @@ export default function ApartmentCard({ apartment, t, i18n }) {
             // Create a new Image object to get the image's dimensions
             const img = new Image();
             img.src = photo;
-
             // Define the maxWidth based on image dimensions
             let maxWidth = '400px'; // Default maxWidth for larger images
             if (img.width && img.height) {
@@ -151,7 +149,7 @@ export default function ApartmentCard({ apartment, t, i18n }) {
                 {t('apModal.tv')}
               </FacilityIcon>
             )}
-            {apartment.extra_large_double_beds && (
+            {apartment.extra_large_double_beds > 0 && (
               <FacilityIcon>
                 <IconImage
                   src="/facility-icons/large_bed.png"
@@ -160,7 +158,7 @@ export default function ApartmentCard({ apartment, t, i18n }) {
                 {apartment.extra_large_double_beds} {t('apModal.elb')}
               </FacilityIcon>
             )}
-            {apartment.double_beds && (
+            {apartment.double_beds > 0 && (
               <FacilityIcon>
                 <IconImage
                   src="/facility-icons/double_bed.png"
@@ -169,7 +167,7 @@ export default function ApartmentCard({ apartment, t, i18n }) {
                 {apartment.double_beds} {t('apModal.db')}
               </FacilityIcon>
             )}
-            {apartment.single_bed && (
+            {apartment.single_bed > 0 && (
               <FacilityIcon>
                 <IconImage
                   src="/facility-icons/single_bed.png"
@@ -184,19 +182,20 @@ export default function ApartmentCard({ apartment, t, i18n }) {
           <StyledTypography variant="subtitle1" sx={sectionHeadingStyle}>
             {t('apModal.of')}
           </StyledTypography>
-
-          {apartment.balcony && (
-            <FacilityIcon>
-              <IconImage src="/facility-icons/balcony.png" alt="balcony" />
-              {t('apModal.b')}
-            </FacilityIcon>
-          )}
-          {apartment.terrace && (
-            <FacilityIcon>
-              <IconImage src="/facility-icons/terrace.png" alt="terrace" />
-              {t('apModal.t')}
-            </FacilityIcon>
-          )}
+          <FacilityIconsContainer>
+            {apartment.balcony && (
+              <FacilityIcon>
+                <IconImage src="/facility-icons/balcony.png" alt="balcony" />
+                {t('apModal.b')}
+              </FacilityIcon>
+            )}
+            {apartment.terrace && (
+              <FacilityIcon>
+                <IconImage src="/facility-icons/terrace.png" alt="terrace" />
+                {t('apModal.t')}
+              </FacilityIcon>
+            )}
+          </FacilityIconsContainer>
         </Grid>
         <Grid item xs={12}>
           <StyledTypography variant="subtitle1" sx={sectionHeadingStyle}>

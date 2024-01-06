@@ -1,61 +1,61 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-import { styled } from "@mui/material/styles";
-import { ButtonBase, Box, Container } from "@mui/material";
-import { useTranslation } from "react-i18next";
-import Typography from "../components/Typography";
-import ApartmentModal from "./ApartmentModal";
-import InitialData from "../../InitialData";
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
+import { ButtonBase, Box, Container } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import Typography from '../../components/Typography';
+import ApartmentModal from './ApartmentModal';
+import InitialData from '../../../InitialData';
 
-const ImageBackdrop = styled("div")(({ theme }) => ({
-  position: "absolute",
+const ImageBackdrop = styled('div')(({ theme }) => ({
+  position: 'absolute',
   left: 0,
   right: 0,
   top: 0,
   bottom: 0,
-  background: "#000",
+  background: '#000',
   opacity: 0.4,
-  transition: theme.transitions.create("opacity"),
+  transition: theme.transitions.create('opacity'),
 }));
 
 const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
-  position: "relative",
-  display: "block",
+  position: 'relative',
+  display: 'block',
   padding: 0,
   borderRadius: 0,
-  height: "40vh",
-  [theme.breakpoints.down("md")]: {
-    width: "100% !important",
+  height: '40vh',
+  [theme.breakpoints.down('md')]: {
+    width: '100% !important',
     height: 100,
   },
-  "&:hover": {
+  '&:hover': {
     zIndex: 1,
   },
-  "&:hover .imageBackdrop": {
+  '&:hover .imageBackdrop': {
     opacity: 0,
   },
-  "&:hover .imageMarked": {
+  '&:hover .imageMarked': {
     opacity: 0,
   },
-  "&:hover .imageTitle": {
-    border: "4px solid currentColor",
+  '&:hover .imageTitle': {
+    border: '4px solid currentColor',
   },
-  "& .imageTitle": {
-    position: "relative",
+  '& .imageTitle': {
+    position: 'relative',
     padding: `${theme.spacing(2)} ${theme.spacing(4)} 14px`,
   },
-  "& .imageMarked": {
+  '& .imageMarked': {
     height: 3,
     width: 18,
     background: theme.palette.common.white,
-    position: "absolute",
+    position: 'absolute',
     bottom: -2,
-    left: "calc(50% - 9px)",
-    transition: theme.transitions.create("opacity"),
+    left: 'calc(50% - 9px)',
+    transition: theme.transitions.create('opacity'),
   },
 }));
 
-const widths = ["40%", "20%", "40%", "38%", "38%", "24%", "40%", "20%", "40%"];
+const widths = ['40%', '20%', '40%', '38%', '38%', '24%', '40%', '20%', '40%'];
 
 const mapApartmentsToImages = (apartments) => {
   return apartments.map((apartment, index) => ({
@@ -81,9 +81,9 @@ export default function Apartments() {
   return (
     <Container component="section" name="apartments" sx={{ my: 5 }}>
       <Typography variant="h4" marked="center" align="center" component="h2">
-        {t("productCategories.text")}
+        {t('productCategories.text')}
       </Typography>
-      <Box sx={{ mt: 5, display: "flex", flexWrap: "wrap" }}>
+      <Box sx={{ mt: 5, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (
           <ImageIconButton
             key={image.title}
@@ -94,28 +94,28 @@ export default function Apartments() {
           >
             <Box
               sx={{
-                position: "absolute",
+                position: 'absolute',
                 left: 0,
                 right: 0,
                 top: 0,
                 bottom: 0,
-                backgroundSize: "cover",
-                backgroundPosition: "center 40%",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center 40%',
                 backgroundImage: `url(${image.url})`,
               }}
             />
             <ImageBackdrop className="imageBackdrop" />
             <Box
               sx={{
-                position: "absolute",
+                position: 'absolute',
                 left: 0,
                 right: 0,
                 top: 0,
                 bottom: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "common.white",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'common.white',
               }}
             >
               <Typography

@@ -12,8 +12,8 @@ import {
 } from '@mui/material';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useTranslation } from 'react-i18next';
-import InitialData from '../../InitialData';
-import ApartmentCard from '../components/ApartmentCard';
+import InitialData from '../../../InitialData';
+import ApartmentCard from './ApartmentCard';
 
 const fetchApartmentDataById = (apartmentId) => {
   const apartment = InitialData.find((apt) => apt.id === apartmentId);

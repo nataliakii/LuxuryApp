@@ -95,13 +95,18 @@ function Copyright() {
   return (
     <>
       {new Date().getFullYear()} All rights reserved.
-      <Link
-        color="secondary.main"
-        sx={{ lineHeight: '1rem' }}
-        href="https://www.linkedin.com/in/natalia-kirejeva/"
-      >
-        <p>Powered by {'© NataliaKi '}</p>
-      </Link>{' '}
+      <br />
+      <p>
+        Powered by{' '}
+        <Link
+          color="secondary.main"
+          sx={{ lineHeight: '1rem' }}
+          href="https://www.linkedin.com/in/natalia-kirejeva/"
+        >
+          {' '}
+          <span>{'© NataliaKi '}</span>
+        </Link>
+      </p>
     </>
   );
 }

@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import { scroller } from 'react-scroll';
-import { useTranslation } from 'react-i18next';
-import Contacts from './Contacts';
-import ProductHeroLayout from './ProductHeroLayout';
-import Typography from '../components/Typography';
-import Button from '../components/Button';
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import { scroller } from "react-scroll";
+import { useTranslation } from "react-i18next";
+import Contacts from "./Contacts";
+import ProductHeroLayout from "./ProductHeroLayout";
+import Typography from "../components/Typography";
+import Button from "../components/Button";
 
-const backgroundImage = '/b2.jpg';
+const backgroundImage = "/b2.jpg";
 
 export default function ProductHero() {
   const { t, i18n } = useTranslation();
@@ -25,18 +25,18 @@ export default function ProductHero() {
     setIsModalOpen(false);
   };
   const handleOnClickContact = () => {
-    scroller.scrollTo('contacts', {
+    scroller.scrollTo("contacts", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
       offset: -50,
     });
   };
   const handleOnClickApartments = () => {
-    scroller.scrollTo('apartments', {
+    scroller.scrollTo("apartments", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
       offset: -50,
     });
   };
@@ -44,12 +44,12 @@ export default function ProductHero() {
     <ProductHeroLayout
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#7fc7d9',
-        backgroundPosition: 'center',
+        backgroundColor: "#7fc7d9",
+        backgroundPosition: "center",
       }}
     >
       <img
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         src={backgroundImage}
         alt="s luxury princess suite"
       />
@@ -59,7 +59,7 @@ export default function ProductHero() {
         variant="h4"
         marked="center"
       >
-        {t('productHero.slogan1')}
+        {t("productHero.slogan1")}
       </Typography>
       <Typography
         color="secondary.dark"
@@ -67,7 +67,7 @@ export default function ProductHero() {
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-        {t('productHero.slogan2')}
+        {t("productHero.slogan2")}
       </Typography>
       <Button
         color="secondary"
@@ -76,7 +76,7 @@ export default function ProductHero() {
         onClick={handleOnClickContact}
         sx={{ minWidth: 200 }}
       >
-        {t('productHero.button')}
+        {t("productHero.button")}
       </Button>
       <Button
         color="secondary"
