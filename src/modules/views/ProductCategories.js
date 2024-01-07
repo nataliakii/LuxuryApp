@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import { ButtonBase, Box, Container } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import Typography from '../components/Typography';
-import ApartmentModal from './ApartmentModal';
+import ApartmentModal from './Apartment/ApartmentModal';
 import InitialData from '../../InitialData';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
